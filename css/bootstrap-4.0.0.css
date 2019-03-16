@@ -1,0 +1,250 @@
+/*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+	height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+.gallery{
+	margin: 10px 50px;
+}
+.gallery img{
+	width: 250px;
+	padding: 5px;
+	filter: grayscale(100%);
+	transition: 1s;
+}
+.gallery img:hover{
+	filter: grayscale(0);
+	transform: scale(1.1);
+	
+}
+body {
+  margin: 0;
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+	perspective-origin: 0% 50%;
+	perspective: 800;
+  color: #212529;
+  text-align: left;
+  background-color: #343434;
+}
+
+nav,main{
+	transition: transform 150ms ease-out;
+}
+
+nav{
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 16em;
+	background-color: #353441;
+	transform: translateX(-16em);
+	
+}
+
+nav.menu-active{
+	transform: translateX(0);
+}
+
+nav.menu-hover{
+	transform: translateX(-15em);
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+
+
+nav h1{
+	z-index: 100;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -65px;
+	height: 60px;
+	widows: 65px;
+	line-height: 60px;
+	font-size: 0.8em;
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: #353441;
+	cursor: pointer;
+}
+nav h1:hover{
+	color: #353441;
+	background: white;
+	
+}
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+nav li{
+	display: inline-block;
+	padding: 0 1em;
+	width: 100%;
+	height: 60px;
+	color: #9dc6d1;
+	line-height: 60px;
+	background-color: #353441;
+	transition: all 0.5s ease-in;
+}
+
+nav li:nth-last-of-type(2n){
+	background-color: #3a3947;
+}
+nav li:hover{
+	background: orangered;
+	color:white;
+}
+
+main{
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	transform-origin: 0% 5%;
+	background-size: cover;
+	
+}
+main:after{
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(to right, transparent, rgba(33,33,45,.5));
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 150ms ease-out, visibility 0s 150ms;
+}
+main.menu-active{
+	border-radius: 0.001px;
+	transform: translateX(16em) rotateY(15deg);
+}
+main.menu-active:after{
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 150ms ease-out, visibility 0s;
+}
+main.menu-hover{
+	border-radius: 0.001px;
+	transform: translateX(1em) rotateY(1deg);
+}
+
+main section{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 1em 4em;
+	max-width:680px;
+	overflow: auto;
+	background-color: rgba(255,255,255,.5);
+	
+}
+section h1{
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 2em;
+}
+section p{
+	display: inline-block;
+	margin: 16px 0;
+}
+
+
+
+
+
+h3{
+	color:darkcyan;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+
+
+
+
+
